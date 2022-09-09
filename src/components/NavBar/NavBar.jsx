@@ -13,10 +13,11 @@ import Tooltip from '@mui/material/Tooltip';
 import MenuItem from '@mui/material/MenuItem';
 import AdbIcon from '@mui/icons-material/Adb';
 import CartWidget from '../CartWidget/CartWidget';
+import { NavLink } from 'react-router-dom';
 
 
 
-const pages = ['Products', 'Pricing', 'Blog'];
+const pages = [{enlace:'/categoria/hardware',nombre:'Hardware'},{enlace:'/categoria/perisfericos',nombre:'Perisfericos'},{enlace:'/categoria/gabinetes',nombre:'Gabinetes'}];
 const settings = ['Profile', 'Account', 'Dashboard', 'Logout'];
 
 const NavBar = () => {
@@ -42,11 +43,10 @@ const NavBar = () => {
     <AppBar position="static" style={{ backgroundColor: "#27272B" }}>
       <Container maxWidth="xl">
         <Toolbar disableGutters>
+          <NavLink to='/' style={{Color:'#bb7dfb', textDecoration:'none'}}>
           <Typography
             variant="h6"
             noWrap
-            component="a"
-            href="/"
             sx={{
               mr: 2,
               display: { xs: 'none', md: 'flex' },
@@ -59,6 +59,7 @@ const NavBar = () => {
           >
             Weird Store
           </Typography>
+          </NavLink>
           <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
             <IconButton
               size="large"
@@ -88,9 +89,9 @@ const NavBar = () => {
                 display: { xs: 'block', md: 'none' },
               }}
             >
-              {pages.map((page) => (
-                <MenuItem key={page} onClick={handleCloseNavMenu}>
-                  <Typography textAlign="center">{page}</Typography>
+              {pages.map((page, index) => (
+                <MenuItem key={index} onClick={handleCloseNavMenu}>
+                  <NavLink to={page.enlace} className='NavLink1'>{page.nombre}</NavLink>
                 </MenuItem>
               ))}
             </Menu>
@@ -114,15 +115,11 @@ const NavBar = () => {
             Weird Store
           </Typography>
           <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
-            {pages.map((page) => (
-              <Button
-                key={page}
-                onClick={handleCloseNavMenu}
-                sx={{ my: 2, color: '#ECE8E1', display: 'block' }}
-              >
-                {page}
-              </Button>
-            ))}
+          {pages.map((page, index) => (
+                <MenuItem key={index} onClick={handleCloseNavMenu}>
+                  <NavLink className='NavLink1' to={page.enlace}>{page.nombre}</NavLink>
+                </MenuItem>
+              ))}
           </Box>
           <CartWidget/>
         </Toolbar>

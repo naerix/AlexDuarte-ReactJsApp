@@ -1,5 +1,7 @@
 # Getting Started with Create React App
 
+Este Ecomerce esta destinado a la venta de hardware de computadoras
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts

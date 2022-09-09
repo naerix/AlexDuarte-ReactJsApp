@@ -10,11 +10,10 @@ function App() {
     <div>
       <BrowserRouter>
         <NavBar/>
-        <ItemDetailCointainer/>
         <Routes>
-          <Route />
-          <Route />
-          <Route />
+          <Route path='/' element={<ItemListContainer />}/>
+          <Route path='/categoria/:categoryId' element={<ItemListContainer/>}/>
+          <Route path='/detalle/:id' element={<ItemDetailCointainer />}/>
         </Routes>
       </BrowserRouter>
     </div>

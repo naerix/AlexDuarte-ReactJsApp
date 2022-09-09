@@ -29,7 +29,7 @@ export default function Item({itemProp}) {
           {description}
         </Typography>
         <Typography gutterBottom variant="h5" component="div">
-          {price}
+          ${price}
         </Typography>
       </CardContent>
       <CardActions>

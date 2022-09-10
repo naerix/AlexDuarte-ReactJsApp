@@ -20,6 +20,12 @@
   font-family: roboto;
 }
 
+@media (max-width: 899px){
+  .NavLink1{
+    color:rgb(41, 41, 41);
+  }
+}
+
 .App-header {
   background-color: #282c34;
   min-height: 100vh;

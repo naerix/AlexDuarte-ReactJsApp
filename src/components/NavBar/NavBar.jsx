@@ -96,15 +96,13 @@ const NavBar = () => {
               ))}
             </Menu>
           </Box>
+          <NavLink to='/' style={{Color:'#bb7dfb', textDecoration:'none'}}>
           <Typography
-            variant="h5"
+            variant="h6"
             noWrap
-            component="a"
-            href=""
             sx={{
               mr: 2,
-              display: { xs: 'flex', md: 'none' },
-              flexGrow: 1,
+              display: { xs: 'none', md: 'flex' },
               fontFamily: 'monospace',
               fontWeight: 700,
               letterSpacing: '.3rem',
@@ -114,6 +112,7 @@ const NavBar = () => {
           >
             Weird Store
           </Typography>
+          </NavLink>
           <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
           {pages.map((page, index) => (
                 <MenuItem key={index} onClick={handleCloseNavMenu}>

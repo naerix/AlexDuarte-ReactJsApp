@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/AlexDuarte-ReactJsApp/static/css/main.070b9b6f.css",
-    "main.js": "/AlexDuarte-ReactJsApp/static/js/main.06870028.js",
+    "main.css": "/AlexDuarte-ReactJsApp/static/css/main.60a6496c.css",
+    "main.js": "/AlexDuarte-ReactJsApp/static/js/main.7df6a967.js",
     "static/js/787.583b0261.chunk.js": "/AlexDuarte-ReactJsApp/static/js/787.583b0261.chunk.js",
     "index.html": "/AlexDuarte-ReactJsApp/index.html",
-    "main.070b9b6f.css.map": "/AlexDuarte-ReactJsApp/static/css/main.070b9b6f.css.map",
-    "main.06870028.js.map": "/AlexDuarte-ReactJsApp/static/js/main.06870028.js.map",
+    "main.60a6496c.css.map": "/AlexDuarte-ReactJsApp/static/css/main.60a6496c.css.map",
+    "main.7df6a967.js.map": "/AlexDuarte-ReactJsApp/static/js/main.7df6a967.js.map",
     "787.583b0261.chunk.js.map": "/AlexDuarte-ReactJsApp/static/js/787.583b0261.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.070b9b6f.css",
-    "static/js/main.06870028.js"
+    "static/css/main.60a6496c.css",
+    "static/js/main.7df6a967.js"
   ]
 }

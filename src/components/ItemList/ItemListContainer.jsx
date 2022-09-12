@@ -1,6 +1,7 @@
 import React, { useState, useEffect} from 'react'
 import ItemList from './ItemList';
 import { useParams } from 'react-router-dom';
+import GridLoader from "react-spinners/CircleLoader";
 
 export default function ItemListContainer() {
 
@@ -21,11 +22,13 @@ export default function ItemListContainer() {
       }
     })
     .catch((e)=> console.log(e))
-    .finally(()=> console.log('finalizo'));
+    .finally(()=> setTimeout(()=>{
+      setLoading(false)
+    },1700));
   },[categoryId]);
-  return (
-    <div>
+  return ( loading? <div className='LoadrContainer'><GridLoader color={'#8d28f6'} loading={loading} size={90} /> <p className='LoadingText'>Cargando...</p></div>:
+  <div>
       <ItemList item={items}/>
-    </div>
+  </div>
   )
 }

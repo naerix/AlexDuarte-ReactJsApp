@@ -4,9 +4,9 @@ import Button from '@mui/material/Button';
 
 
 
-export default function ItemCount({stock, initial, onAdd}) {
+export default function ItemCount({stock, onAdd, contador, setContador, initial}) {
 
-  const [contador, setContador]=useState(initial)
+  
 
   const sumar = ()=>{
     if(contador < stock ){

@@ -27,7 +27,7 @@ export default function ItemListContainer() {
     },1700));
   },[categoryId]);
   return ( loading? <div className='LoadrContainer'><GridLoader color={'#8d28f6'} loading={loading} size={90} /> <p className='LoadingText'>Cargando...</p></div>:
-  <div>
+  <div className='list-container'>
       <ItemList item={items}/>
   </div>
   )

@@ -6,15 +6,27 @@ import { useNavigate } from 'react-router-dom';
 import Button from '@mui/material/Button';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import { useCart } from '../../context/CartContext';
 
 export default function ItemDetail({data}) {
   const navigate = useNavigate();
   const [compra, setCompra]=useState(false)
-  const {image,title,description,price,stock} = data
+  const {id,image,title,description,price,stock} = data
   const [initial, setInitial]=useState(1)
   const [contador, setContador]=useState(initial)
+  const {addItem}=useCart()
   const onAdd= ()=>{
-    setCompra(true)
+
+    let onCart = {
+      id,
+      title,
+      price,
+      stock,
+      image,
+      cantidad: contador
+    }
+    addItem(onCart);
+    setCompra(true);
 
     toast('Se agrego al carrito', {
       position: "top-center",

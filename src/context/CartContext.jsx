@@ -7,17 +7,11 @@ export const CartProvider = ({children})=>{
     const [cart, setCart]=useState([]);
 
     const addItem =(item)=>{
-       const inCart = cart.map((product)=> product.id === item.id)
+       const inCart = cart.find((product)=> product.id === item.id)
         if(inCart){
-            const CartUpdated = cart.map((product)=>{
-                if(product.id === item.id){
-                    return {...product, cantidad: product.cantidad + item.cantidad}
-                }
-                else{
-                    return product
-                }
-            }) 
-            setCart(CartUpdated)
+            inCart.cantidad = inCart.cantidad + item.cantidad;
+
+            setCart([...cart])
         } else{
            setCart([...cart,item]) 
         }

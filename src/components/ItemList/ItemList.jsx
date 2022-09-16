@@ -9,7 +9,7 @@ export default function ItemList({item}) {
   return (
     <div className='Cards-Container'>
       {item.map( (items) => {
-        return( <Item key={item.id} itemProp={items}/>)
+        return( <Item key={items.id} itemProp={items}/>)
       })}
     </div>
     

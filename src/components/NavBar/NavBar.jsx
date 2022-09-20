@@ -123,7 +123,7 @@ const NavBar = () => {
                 </MenuItem>
               ))}
           </Box>
-          <CartWidget/>
+            <CartWidget/>
         </Toolbar>
       </Container>
     </AppBar>

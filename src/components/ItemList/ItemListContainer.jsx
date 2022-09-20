@@ -2,6 +2,9 @@ import React, { useState, useEffect} from 'react'
 import ItemList from './ItemList';
 import { useParams } from 'react-router-dom';
 import GridLoader from "react-spinners/CircleLoader";
+import Loader from '../Loader/Loader';
+import {db} from '../../firebase/Firebase'
+import { getDocs, collection, query, where} from 'firebase/firestore';
 
 export default function ItemListContainer() {
 
@@ -9,24 +12,23 @@ export default function ItemListContainer() {
   const [e, setE]= useState('error');
   const [loading, setLoading] = useState(true);
   const {categoryId}=useParams()
-
+  
+  //Firebase
   useEffect(()=>{
-    fetch('https://6319659c8e51a64d2be3b3db.mockapi.io/api/v1/products')
-    .then(res=>res.json())
-    .then(json=> { 
-      if(categoryId){
-        setItems(json.filter((item)=>item.category === categoryId))
-      }
-      else{
-        setItems(json)
-      }
+    const productos = categoryId? query(collection(db, "products"),where("category", "==", categoryId)) :collection(db, "products")
+    getDocs(productos)
+    .then((res)=>{
+      const list = res.docs.map((product)=>{
+        return {
+          id: product.id, ...product.data()
+        }
+      })
+      setItems(list)
     })
     .catch((e)=> console.log(e))
-    .finally(()=> setTimeout(()=>{
-      setLoading(false)
-    },1700));
-  },[categoryId]);
-  return ( loading? <div className='LoadrContainer'><GridLoader color={'#8d28f6'} loading={loading} size={90} /> <p className='LoadingText'>Cargando...</p></div>:
+    .finally(()=> setLoading(false));
+  }, [categoryId])
+  return ( loading? <Loader loading={loading}/> :
   <div className='list-container'>
       <ItemList item={items}/>
   </div>

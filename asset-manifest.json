@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/AlexDuarte-ReactJsApp/static/css/main.a06dca6d.css",
-    "main.js": "/AlexDuarte-ReactJsApp/static/js/main.47e226ac.js",
+    "main.css": "/AlexDuarte-ReactJsApp/static/css/main.154e6ea1.css",
+    "main.js": "/AlexDuarte-ReactJsApp/static/js/main.bc51b577.js",
     "static/js/787.583b0261.chunk.js": "/AlexDuarte-ReactJsApp/static/js/787.583b0261.chunk.js",
     "static/media/1422893.png": "/AlexDuarte-ReactJsApp/static/media/1422893.9689aafbdafed71e18fb.png",
     "index.html": "/AlexDuarte-ReactJsApp/index.html",
-    "main.a06dca6d.css.map": "/AlexDuarte-ReactJsApp/static/css/main.a06dca6d.css.map",
-    "main.47e226ac.js.map": "/AlexDuarte-ReactJsApp/static/js/main.47e226ac.js.map",
+    "main.154e6ea1.css.map": "/AlexDuarte-ReactJsApp/static/css/main.154e6ea1.css.map",
+    "main.bc51b577.js.map": "/AlexDuarte-ReactJsApp/static/js/main.bc51b577.js.map",
     "787.583b0261.chunk.js.map": "/AlexDuarte-ReactJsApp/static/js/787.583b0261.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.a06dca6d.css",
-    "static/js/main.47e226ac.js"
+    "static/css/main.154e6ea1.css",
+    "static/js/main.bc51b577.js"
   ]
 }

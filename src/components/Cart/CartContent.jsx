@@ -9,6 +9,8 @@ import TableRow from '@mui/material/TableRow';
 import Paper from '@mui/material/Paper';
 import { useCart } from '../../context/CartContext';
 import { Button,Typography } from '@mui/material'
+import IconButton from '@mui/material/IconButton';
+import DeleteIcon from '@mui/icons-material/Delete';
 
 
 
@@ -32,10 +34,7 @@ const StyledTableRow = styled(TableRow)(({ theme }) => ({
   },
 }));
 
-function createData(name, calories, fat, carbs, protein) {
 
-  return { name, calories, fat, carbs, protein };
-}
 
 export default function CartContext() {
     const {cart, removeItem, cartTotal, clear}= useCart()
@@ -63,7 +62,11 @@ export default function CartContext() {
               </StyledTableCell>
               <StyledTableCell align="right">{compra.cantidad}</StyledTableCell>
               <StyledTableCell align="right">${compra.price}</StyledTableCell>
-              <StyledTableCell align="right">{<Button variant='contained' onClick={()=>removeItem(compra.id)} style={{backgroundColor:'rgba(0, 0, 0, 0.87)'}}>X</Button>}</StyledTableCell>
+              <StyledTableCell align="right">{
+                <IconButton aria-label="delete"  onClick={()=>removeItem(compra.id)}>
+                  <DeleteIcon fontSize="medium" className='Delete' />
+                </IconButton>}
+              </StyledTableCell>
               <StyledTableCell align="right">{''}</StyledTableCell>
             </StyledTableRow>
           ))}
@@ -77,6 +80,7 @@ export default function CartContext() {
             <Button variant='contained' style={{backgroundColor:'rgba(0, 0, 0, 0.87)'}}>Terminar Compra</Button>
         </div>
     </div>
+    <br />
     </>
   );
 }

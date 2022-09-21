@@ -107,6 +107,11 @@
   flex-direction: column;
 }
 
+.Delete{
+  color:#000000;
+  text-decoration: none;
+}
+
 .Cart-empty{
   display: flex;
   flex-direction: column;

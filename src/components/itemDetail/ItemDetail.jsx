@@ -42,7 +42,7 @@ export default function ItemDetail({data}) {
     <div className='Detail-Container'>
       <React.Fragment>
       <CssBaseline />
-      <Container maxWidth="m" sx={{ minWidth: 200 }}>
+      <Container maxWidth="l" sx={{ minWidth: 200 }}>
         <div className='prod-div'>
           <img src={image} alt={title} className="prod-img"/>
           <div className='info-div'>
@@ -59,6 +59,8 @@ export default function ItemDetail({data}) {
         </div>
       </Container>
     </React.Fragment>
+    <br/>
     </div>
+
   )
 }

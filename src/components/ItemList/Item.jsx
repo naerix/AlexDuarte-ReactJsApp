@@ -23,6 +23,7 @@ export default function Item({itemProp}) {
         height="240"
         image={image}
         alt="Item"
+        style={{objectFit:'contain'}}
       />
       <CardContent>
         <Typography gutterBottom variant="h5" component="div">

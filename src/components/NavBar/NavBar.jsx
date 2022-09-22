@@ -14,7 +14,7 @@ import MenuItem from '@mui/material/MenuItem';
 import AdbIcon from '@mui/icons-material/Adb';
 import CartWidget from '../CartWidget/CartWidget';
 import { NavLink, Link } from 'react-router-dom';
-
+import weirdstore from '../../assets/Weirdstore-logo.svg'
 
 
 const pages = [{enlace:'/categoria/hardware',nombre:'Hardware'},{enlace:'/categoria/perisfericos',nombre:'Perisfericos'},{enlace:'/categoria/gabinetes',nombre:'Gabinetes'}];
@@ -43,21 +43,18 @@ const NavBar = () => {
     <AppBar position="static" style={{ backgroundColor: "#27272B" }}>
       <Container maxWidth="xl">
         <Toolbar disableGutters>
-          <NavLink to='/' style={{Color:'#bb7dfb', textDecoration:'none'}}>
+          <NavLink to='/' style={{display:'flex', alignItems:'center', justifyContent:'center'}} >
           <Typography
             variant="h6"
             noWrap
             sx={{
               mr: 2,
               display: { xs: 'none', md: 'flex' },
-              fontFamily: 'monospace',
-              fontWeight: 700,
-              letterSpacing: '.3rem',
-              color: '#bb7dfb',
               textDecoration: 'none',
             }}
+            
           >
-            Weird Store
+            <img src={weirdstore} alt="weird store logo"  style={{width:'15rem', height:'auto'}} />
           </Typography>
           </NavLink>
           <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
@@ -113,7 +110,7 @@ const NavBar = () => {
               textDecoration: 'none',
             }}
           >
-            Weird Store
+            <img src={weirdstore} alt="weird store logo"  style={{width:'15rem', height:'auto'}} />
           </Typography>
           </NavLink>
           <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>

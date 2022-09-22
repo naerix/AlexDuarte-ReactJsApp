@@ -58,7 +58,7 @@ export default function CartContext() {
           {cart.map((compra) => (
             <StyledTableRow key={compra.id}>
               <StyledTableCell component="th" scope="row"><div className='cartInfo'><img className='CartImage' src={compra.image}/>
-                {compra.title}</div>
+                <h4>{compra.title}</h4></div>
               </StyledTableCell>
               <StyledTableCell align="right">{compra.cantidad}</StyledTableCell>
               <StyledTableCell align="right">${compra.price}</StyledTableCell>

@@ -41,25 +41,25 @@ export default function ItemDetail({data}) {
   return (
     <div className='Detail-Container'>
       <React.Fragment>
-      <CssBaseline />
-      <Container maxWidth="l" sx={{ minWidth: 200 }}>
-        <div className='prod-div'>
-          <img src={image} alt={title} className="prod-img"/>
-          <div className='info-div'>
-            <h2>{title}</h2>    
-            <p>{description}</p>
-            <h4 style={{fontSize:'1.6rem'}}>${price}</h4>
-            {!compra? <ItemCount  stock={stock} onAdd={onAdd} contador={contador} setContador={setContador} initial={initial}/>:
-            <div> 
-              <Button variant="contained" onClick={()=>navigate('/')} style={{backgroundColor:'rgba(0, 0, 0, 0.87)', marginRight:'1rem'}}>Seguir Comprando</Button>
-              <Button variant="contained"  onClick={()=>navigate('/cart')} style={{backgroundColor:'rgba(0, 0, 0, 0.87)'}}>Ir al carrito </Button>
-            </div>} 
+        <CssBaseline />
+          <Container maxWidth="l" sx={{ minWidth: 200 }}>
+            <div className='prod-div'>
+              <img src={image} alt={title} className="prod-img"/>
+            <div className='info-div'>
+              <h2>{title}</h2>    
+              <p>{description}</p>
+              <h4 style={{fontSize:'1.6rem'}}>${price}</h4>
+              {!compra? <ItemCount  stock={stock} onAdd={onAdd} contador={contador} setContador={setContador} initial={initial}/>:
+              <div className='cartBtns'> 
+                <Button variant="contained" onClick={()=>navigate('/')} style={{backgroundColor:'rgba(0, 0, 0, 0.87)', marginRight:'1rem'}}>Seguir Comprando</Button>
+                <Button variant="contained"  onClick={()=>navigate('/cart')} style={{backgroundColor:'rgba(0, 0, 0, 0.87)'}}>Ir al carrito </Button>
+              </div>} 
           </div>
           <ToastContainer theme='dark'/>
         </div>
       </Container>
-    </React.Fragment>
-    <br/>
+      </React.Fragment>
+      <br/>
     </div>
 
   )

@@ -11,7 +11,7 @@ import { useCart } from '../../context/CartContext';
 import { Button,Typography } from '@mui/material'
 import IconButton from '@mui/material/IconButton';
 import DeleteIcon from '@mui/icons-material/Delete';
-
+import { useNavigate } from 'react-router-dom';
 
 
 const StyledTableCell = styled(TableCell)(({ theme }) => ({
@@ -38,6 +38,7 @@ const StyledTableRow = styled(TableRow)(({ theme }) => ({
 
 export default function CartContext() {
     const {cart, removeItem, cartTotal, clear}= useCart()
+    const navegar =useNavigate()
   return (
     <>
     <br />
@@ -77,7 +78,7 @@ export default function CartContext() {
         <Typography variant='h6'>Total a pagar: ${cartTotal()}</Typography>
         <div>
             <Button onClick={()=> clear()} variant='contained' style={{marginRight:'1.5rem',backgroundColor:'rgba(0, 0, 0, 0.87)'}}>Vaciar carrito</Button>
-            <Button variant='contained' style={{backgroundColor:'rgba(0, 0, 0, 0.87)'}}>Terminar Compra</Button>
+            <Button variant='contained' style={{backgroundColor:'rgba(0, 0, 0, 0.87)'}} onClick={()=>navegar('/checkout')}>Terminar Compra</Button>
         </div>
     </div>
     <br />

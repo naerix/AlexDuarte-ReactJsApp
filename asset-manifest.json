@@ -1,16 +1,17 @@
 {
   "files": {
-    "main.css": "/AlexDuarte-ReactJsApp/static/css/main.154e6ea1.css",
-    "main.js": "/AlexDuarte-ReactJsApp/static/js/main.bc51b577.js",
+    "main.css": "/AlexDuarte-ReactJsApp/static/css/main.b4e0c0eb.css",
+    "main.js": "/AlexDuarte-ReactJsApp/static/js/main.9645be1a.js",
     "static/js/787.583b0261.chunk.js": "/AlexDuarte-ReactJsApp/static/js/787.583b0261.chunk.js",
+    "static/media/Weirdstore-logo.svg": "/AlexDuarte-ReactJsApp/static/media/Weirdstore-logo.6ba56a196bc0e6ab9339e9f5acebe581.svg",
     "static/media/1422893.png": "/AlexDuarte-ReactJsApp/static/media/1422893.9689aafbdafed71e18fb.png",
     "index.html": "/AlexDuarte-ReactJsApp/index.html",
-    "main.154e6ea1.css.map": "/AlexDuarte-ReactJsApp/static/css/main.154e6ea1.css.map",
-    "main.bc51b577.js.map": "/AlexDuarte-ReactJsApp/static/js/main.bc51b577.js.map",
+    "main.b4e0c0eb.css.map": "/AlexDuarte-ReactJsApp/static/css/main.b4e0c0eb.css.map",
+    "main.9645be1a.js.map": "/AlexDuarte-ReactJsApp/static/js/main.9645be1a.js.map",
     "787.583b0261.chunk.js.map": "/AlexDuarte-ReactJsApp/static/js/787.583b0261.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.154e6ea1.css",
-    "static/js/main.bc51b577.js"
+    "static/css/main.b4e0c0eb.css",
+    "static/js/main.9645be1a.js"
   ]
 }

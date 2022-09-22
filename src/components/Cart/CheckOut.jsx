@@ -81,11 +81,11 @@ export default function CheckOut() {
             </form>
         </div>: <div className='buyfn'>
             <img src={successIcon} alt="success-Icon" className='succesIcon'/>
-            <Typography variant='h7' sx={{
+            <Typography variant='h5' sx={{
             fontWeight: 500,
             paddingBottom: 3
             }}>¡Compra Finalizada!</Typography>
-            <Typography variant='h5' sx={{
+            <Typography variant='h6' sx={{
             fontWeight: 500,
             paddingBottom: 3
             }}>su N° de orden es: {orderId}</Typography>

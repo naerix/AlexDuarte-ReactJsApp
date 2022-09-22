@@ -62,20 +62,24 @@ export default function CheckOut() {
   return (
     <div className='checkout'>
         
-        <Typography variant='h5' sx={{
-            fontWeight: 500,
-            paddingBottom: 2
-            }}>Finaliza tu compra</Typography>
-                        <Typography variant='h5' sx={{
-            fontWeight: 500,
-            paddingBottom: 3
-            }}>Por favor ingresa los siguientes datos</Typography>
-        {!orderId?<form onSubmit={finalizarCompra} className='buyfn'>
-            <input type="text" placeholder='Nombre y Apellido' name="name" onChange={datosCliente} className='imput_form'/>
-            <input type="number" placeholder='Numero de telefono' name="phone" onChange={datosCliente} className='imput_form'/>
-            <input type="email" placeholder='Email'name="email" onChange={datosCliente} className='imput_form'/>
-            <Button type='submit' variant='contained' style={{backgroundColor:'#444'}}>Finalizar Compra</Button>
-        </form>: <div className='buyfn'>
+
+        {!orderId? 
+        <div className='checkout'> 
+            <Typography variant='h5' sx={{
+                fontWeight: 500,
+                paddingBottom: 2
+                }}>Finaliza tu compra</Typography>
+            <Typography variant='h5' sx={{
+                    fontWeight: 500,
+                    paddingBottom: 3
+                }}>Por favor ingresa los siguientes datos</Typography>
+            <form onSubmit={finalizarCompra} className='buyfn'>
+                <input type="text" placeholder='Nombre y Apellido' name="name" onChange={datosCliente} className='imput_form'/>
+                <input type="number" placeholder='Numero de telefono' name="phone" onChange={datosCliente} className='imput_form'/>
+                <input type="email" placeholder='Email'name="email" onChange={datosCliente} className='imput_form'/>
+                <Button type='submit' variant='contained' style={{backgroundColor:'#444'}}>Finalizar Compra</Button>
+            </form>
+        </div>: <div className='buyfn'>
             <img src={successIcon} alt="success-Icon" className='succesIcon'/>
             <Typography variant='h7' sx={{
             fontWeight: 500,

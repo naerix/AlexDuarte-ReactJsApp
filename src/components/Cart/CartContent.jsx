@@ -75,7 +75,7 @@ export default function CartContext() {
       </Table>
     </TableContainer>
     <div>
-        <Typography variant='h6'>Total a pagar: ${cartTotal()}</Typography>
+        <Typography variant='h6'>Total a pagar: ${cartTotal().toFixed(3)}</Typography>
         <div>
             <Button onClick={()=> clear()} variant='contained' style={{marginRight:'1.5rem',backgroundColor:'rgba(0, 0, 0, 0.87)'}}>Vaciar carrito</Button>
             <Button variant='contained' style={{backgroundColor:'rgba(0, 0, 0, 0.87)'}} onClick={()=>navegar('/checkout')}>Terminar Compra</Button>

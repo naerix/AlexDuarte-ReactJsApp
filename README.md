@@ -6,7 +6,7 @@
 ## ATENCION: 
  ### si solo se  ve la Nav y el Footer hacer click en el logo para ver el home(erroes de compatibilidad de github y react routerdom)
 
-<img src='capture.gif' alt='Gif de app'>
+<img src='./capture.gif' alt='Gif de app'>
 
 por alguna razon el gif no se esta mostrando, ( de igual forma esta a mano en la carpeta base ) 
 

@@ -8,6 +8,8 @@
 
 <img src='./capture.gif' alt='Gif de app'>
 
+por alguna razon el gif no se esta mostrando, ( de igual forma esta a mano en la carpeta base ) 
+
 
 Este es mi proyecto de ecomerce, desarrollado en ReactJS, para el curso de CoderHouse de React
 utilizando Mui y css puro para los estilos, Firebase como Hosting y DataBase
